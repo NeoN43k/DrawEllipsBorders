@@ -6,6 +6,15 @@ import javafx.scene.paint.Color;
 
 public class Rasterization {
 
+    public static void drawEllipseByCorner(Canvas canvas, int x1, int y1, int width, int height) {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        int centerX = x1 + width / 2;
+        int centerY = y1 + height / 2;
+        int a = width / 2;
+        int b = height / 2;
+        drawEllipse(gc, centerX, centerY, a, b);
+    }
+
     public static void drawEllipseByCenter(Canvas canvas, int centerX, int centerY, int a, int b) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         drawEllipse(gc, centerX, centerY, a, b);
