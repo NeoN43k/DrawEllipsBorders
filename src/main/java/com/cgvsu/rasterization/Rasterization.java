@@ -21,6 +21,10 @@ public class Rasterization {
     }
 
     private static void drawEllipse(GraphicsContext gc, int centerX, int centerY, int a, int b) {
+        if (a <= 0 || b <= 0) {
+            return;
+        }
+
         int x = 0;
         int y = b;
 
